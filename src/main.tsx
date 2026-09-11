@@ -1,10 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+import { Container } from './app/HelloWorld/Container'
+import HelloWorld from './app/HelloWorld/HelloWorld';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
+    <Container>
+      {/* HelloWorld Become Children to Container */}
+      <HelloWorld/>
+    </Container>
+  </StrictMode>
 )
