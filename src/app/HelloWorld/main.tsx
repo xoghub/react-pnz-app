@@ -8,6 +8,7 @@ import MyButton from '../AlertButton/MyButton';
 import ToolBar from '../AlertButton/ToolBar';
 import SearchForm from '../Form/SearchForm';
 import SayHelloForm from '../Form/SayHelloForm';
+import Counter from '../Form/Counter.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -23,5 +24,6 @@ createRoot(document.getElementById('root')!).render(
     }} />
     <SearchForm />
     <SayHelloForm/>
+    <Counter/>
   </StrictMode>
 )
