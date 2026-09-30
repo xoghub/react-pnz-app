@@ -8,7 +8,9 @@ export default function Counter() {
             <h1>Counter : {counter}</h1>
             <button onClick={
                 () => {
-                    setCounter(counter + 1);
+                    setCounter(counter => counter + 1);
+                    setCounter(counter => counter + 1);
+                    setCounter(counter => counter + 1);
                     console.log("counter", counter);
                 }
             } >Add Counter</button>
