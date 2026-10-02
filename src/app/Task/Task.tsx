@@ -34,6 +34,7 @@ export default function Task() {
               value={item.name}
               onChange={handleChange}
             />
+            <br />
             <input
               type="text"
               placeholder="Task Message"
@@ -41,6 +42,7 @@ export default function Task() {
               value={item.message}
               onChange={handleChange}
             />
+            <br />
             <button onClick={handleClick}>Add Task</button>
           </form>
         </div>
