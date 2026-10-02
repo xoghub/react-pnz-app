@@ -12,7 +12,7 @@ export default function TaskForm({onSubmit}) {
 
     function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
       e.preventDefault();
-      onSubmit(item.name, item.message);
+      onSubmit({ name: item.name, message: item.message });
       setItem({ name: "", message: "" });
     }
 
