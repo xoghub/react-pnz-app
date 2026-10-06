@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TaskForm({onSubmit}) {
+export default function TaskForm({setItems}) {
     const [item, setItem] = React.useState({name: '', message: ''});
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -12,7 +12,10 @@ export default function TaskForm({onSubmit}) {
 
     function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
       e.preventDefault();
-      onSubmit({ name: item.name, message: item.message });
+    //   onSubmit({ name: item.name, message: item.message });
+    setItems( draft => {
+        draft.push({ name: item.name, message: item.message });
+    })
       setItem({ name: "", message: "" });
     }
 

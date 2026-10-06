@@ -4,14 +4,15 @@ import TaskList from './TaskList';
 
 export default function Task() {
     const [items, setItems] = useImmer<{ name: string; message: string }[]>([]);
-    function handleAddTask(item: {name: string, message: string}) {
-        setItems(draft => {
-            draft.push(item);
-        });
-    }
+    // function handleAddTask(item: {name: string, message: string}) {
+    //     setItems(draft => {
+    //         draft.push(item);
+    //     });
+    // }
     return (
     <div>
-        <TaskForm onSubmit={handleAddTask} />
+        {/* <TaskForm onSubmit={handleAddTask} /> */}
+        <TaskForm setItems={setItems} />
         <TaskList items={items} />
     </div>
   )
