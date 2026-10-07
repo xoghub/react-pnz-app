@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../hello-world"
+		},
+		{
+			"path": "../react-route-pnz"
 		}
 	],
 	"settings": {}
