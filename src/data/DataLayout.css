@@ -1,0 +1,85 @@
+/* Reset basic margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header Container */
+.header-bar {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo styling */
+.logo a {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navigation Menu */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-menu a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Hover & Active States */
+.nav-menu a:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+.nav-menu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+  .header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .nav-menu li {
+    margin: 10px 0 0 0;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    display: block;
+    width: 100%;
+  }
+}
