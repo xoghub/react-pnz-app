@@ -15,38 +15,49 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  position: fixed;
+  gap: 16px;
+  padding: 10px 24px;
+  /* sticky keeps the bar inside the normal layout flow (so it never
+     covers the content) while still staying pinned to the top on scroll */
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
 }
 
 /* Logo styling */
-.logo a {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  display: block;
+  height: 32px;
+  width: auto;
 }
 
 /* Navigation Menu */
 .nav-menu ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
 }
 
 .nav-menu li {
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 .nav-menu a {
+  display: inline-block;
   color: #f2f2f2;
   text-decoration: none;
   font-size: 17px;
   padding: 8px 16px;
-  transition: background-color 0.3s ease;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 /* Hover & Active States */
@@ -60,26 +71,39 @@ body {
   color: white;
 }
 
+/* Page content */
+.content {
+  flex: 1;
+  padding: 24px;
+}
+
+/* Footer */
+.data-footer {
+  background-color: #333;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px;
+}
+
 /* Responsive Design for Small Screens */
 @media (max-width: 600px) {
   .header-bar {
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .nav-menu {
+    max-width: 100%;
   }
 
   .nav-menu ul {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 15px;
-  }
-
-  .nav-menu li {
-    margin: 10px 0 0 0;
-    width: 100%;
+    justify-content: center;
+    gap: 2px;
   }
 
   .nav-menu a {
-    display: block;
-    width: 100%;
+    font-size: 14px;
+    padding: 6px 10px;
   }
 }

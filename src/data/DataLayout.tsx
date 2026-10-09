@@ -1,19 +1,30 @@
-import { Outlet } from "react-router";
+import { Link, Outlet } from "react-router";
 import reactLogo from "../assets/react.svg";
+import "./DataLayout.css";
 
 
 export default function DataLayout() {
     return (
       <>
         <header className="header-bar">
-          <a href="" className="logo">
+          <Link to="/data" className="logo-link">
             <img src={reactLogo} className="framework" alt="React logo" />
-          </a>
+          </Link>
           <nav className="nav-menu">
-            <a href="/data">Data Home</a>
-            <a href="/data/customer">Customer</a>
-            <a href="/data/seller">Seller</a>
-            <a href="/data/products">Products</a>
+            <ul>
+              <li>
+                <Link to="/data">Data Home</Link>
+              </li>
+              <li>
+                <Link to="/data/customer">Customer</Link>
+              </li>
+              <li>
+                <Link to="/data/seller">Seller</Link>
+              </li>
+              <li>
+                <Link to="/data/products">Products</Link>
+              </li>
+            </ul>
           </nav>
         </header>
         <div className="content">
