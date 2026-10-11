@@ -20,10 +20,15 @@ export default function DataLayout() {
               </li>
               <li>
                 <NavLink to={{
-                  pathname: '/data/products',
+                  pathname: '/data/products'
+                }}>Products</NavLink>
+              </li>
+              <li>
+                <NavLink to={{
+                  pathname: '/data/products/search',
                   search: '?category=electronics&sort=price',
                   hash: '#top'
-                }}>Products</NavLink>
+                }}>Products Search</NavLink>
               </li>
             </ul>
           </nav>
