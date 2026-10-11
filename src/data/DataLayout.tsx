@@ -1,10 +1,12 @@
-import { NavLink, Outlet } from "react-router";
+import { NavLink, Outlet, useLocation } from "react-router";
 import reactLogo from "../assets/react.svg";
 import "./DataLayout.css";
 
 
 export default function DataLayout() {
-    return (
+  const currentLocation = useLocation();
+
+  return (
       <>
         <header className="header-bar">
           <NavLink to="/data" className="logo-link">
@@ -38,6 +40,7 @@ export default function DataLayout() {
         </div>
         <div className="data-footer">
           <p>&copy; 2023 Data Layout. All rights reserved.</p>
+          <p>Current Location : {currentLocation.pathname}{currentLocation.search}{currentLocation.hash}</p>
         </div>
       </>
     );
